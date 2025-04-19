@@ -19,8 +19,8 @@ function CharacterCard({ name, alias, alignment, powers, image_url }) {
     const preview = powers.length > 25 ? powers.slice(0, 25) + '...' : powers; 
 
     return (
-        <Card style={{ width: '20rem' }} className="character-card mb-4 shadow-sm hover-zoom">
-            <Card.Img src={image_url} alt={`${name} character image`} />
+        <Card style={{ width: '25rem' }} className="character-card mb-4 shadow-sm hover-zoom">
+            <Card.Img src={image_url} alt={`${name} character image`} style={{height: '300px', objectFit: 'cover'}} />  {/* style here ensures images are all the same height for uniformity */}
             <Card.Body className="bg-primary text-white d-flex justify-content-center">  
                 <div className="text-start">
                     <Card.Title className="fw-bold fs-1 text-center mb-4 text-decoration-underline"> {name} </Card.Title>

@@ -1,0 +1,17 @@
+body {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+/* CharacterCard.jsx */
+
+.hover-zoom:hover {
+    transform: scale(1.10);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    position: relavative; /* this is required for z-index to work */
+    overflow: hidden /* this ensures the growth on hover doesn't break the grid by shifting the layout when it expands */
+    
+}
+
