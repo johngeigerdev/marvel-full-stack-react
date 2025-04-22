@@ -1,5 +1,7 @@
 import Card from 'react-bootstrap/Card';
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 function titleCase(str) {
     return str
@@ -9,7 +11,7 @@ function titleCase(str) {
         .join(' ') //now it's turning the array back into a string seperating each element with a space
 }
 
-function CharacterCard({ name, alias, alignment, powers, image_url }) {
+function CharacterCard({ name, id, alias, alignment, powers, image_url, onDelete }) {
     const [showMore, setShowMore] = useState(false);
 
     const togglePowers = () => setShowMore(!showMore);
@@ -19,11 +21,17 @@ function CharacterCard({ name, alias, alignment, powers, image_url }) {
     const preview = powers.length > 25 ? powers.slice(0, 25) + '...' : powers; 
 
     return (
-        <Card style={{ width: '25rem' }} className="character-card mb-4 shadow-sm hover-zoom">
+        <Card style={{ width: '25rem' }} className="character-card mb-4 shadow-sm">
             <Card.Img src={image_url} alt={`${name} character image`} style={{height: '300px', objectFit: 'cover'}} />  {/* style here ensures images are all the same height for uniformity */}
             <Card.Body className="bg-primary text-white d-flex justify-content-center">  
                 <div className="text-start">
                     <Card.Title className="fw-bold fs-1 text-center mb-4 text-decoration-underline"> {name} </Card.Title>
+                    <div className="text-center mb-3 card-buttons">
+                        <Link to={`/edit-character/${id}`} style={{textDecoration: 'none'}}>
+                            <Button variant="warning" size="sm">Edit</Button>
+                        </Link>
+                        <Button variant="danger" size="sm" onClick={() => onDelete(id)} >Delete</Button> 
+                    </div>
                     <Card.Subtitle className="mb-2 text-light fs-4">
                         <strong>AKA: </strong>{titleCase(alias)}
                     </Card.Subtitle>
