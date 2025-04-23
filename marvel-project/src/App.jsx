@@ -7,6 +7,7 @@ import NavBar from './components/NavBar';
 import { useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import About from './pages/About';
+import NotFound from './pages/NotFound';
 
 function App() {
   
@@ -22,6 +23,7 @@ function App() {
         <Route path='/about' element={<About /> } />
         <Route path='/add-character' element={<AddCharacter />} />
         <Route path='/edit-character/:id' element={<EditCharacter />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </Router>
   )
