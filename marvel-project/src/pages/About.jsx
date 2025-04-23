@@ -7,10 +7,10 @@ function About() {
             <Row className = "text-center">
                 <h3> Welcome to my module-7 full-stack Marvel project</h3>
             </Row>
-            <Row className="mb-4">
-                <Col>
-                    <div className="d-flex justify-content-center px-3">
-                        <Carousel style={{width: '300px'}}>
+            <Row className="mb-4 justify-content-center">
+                <Col md="auto">
+                    <div style={{ padding: '0 1rem', maxWidth: '350px' }}>
+                        <Carousel>
                             <Carousel.Item>
                                 <img
                                     className='d-block w-100'
