@@ -38,11 +38,12 @@ function Home({ searchTerm }) {
 
   //below is mapping through the array of characters and uses the character id as the key and displaying the card for each
   return (
-    <Container className="container my-5">
+    <Container fluid className="mt-0 px-0 text-primary bg-dark">
+      <h1 className = "text-center fw-bold py-5 home-heading">Explore the Marvel Multiverse</h1>
       {filteredCharacters.length === 0 && (  //this will display the below message if the search found nothing
         <p className="text-center mt-4 text-muted">No characters match your search criteria</p>
       )}
-      <Row className="g-4 justify-content-center">
+      <Row className="g-4 px-4 justify-content-center">
         {filteredCharacters.map((char) => (
           <Col key={char.id} sm={12} md={6} lg={4} className='d-flex justify-content-center'>
             <CharacterCard {...char} onDelete={handleDelete} />

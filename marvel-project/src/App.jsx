@@ -16,8 +16,7 @@ function App() {
 
   return (
     <Router>
-      <NavBar />
-      <Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />  {/* passing this down to the NavBar component */}
+      <NavBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />  {/* passing this down to the NavBar component */}
       <Routes>
         <Route path='/' element={<Home searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />  {/* passing this down to Home component */}
         <Route path='/about' element={<About /> } />

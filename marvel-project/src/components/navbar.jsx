@@ -21,13 +21,16 @@ function NavBar({ searchTerm, setSearchTerm}) {  // adding searchTerm and setSea
                     </Nav>
                     <Form>
                         <Form.Group>
-                        <Form.Label>Character Search</Form.Label>
-                        <Form.Control //search box
-                        type="text" 
-                        placeholder="Search by name or alias"
-                        value={searchTerm}  // this is controlled by the parent (app.jsx)'s state. 
-                        onChange={(event) => setSearchTerm(event.target.value)}  // this updates the parent's state. when the user types something in, it changes that value to setSearchTerm for the search
-                        />
+                            <div className="d-flex align-items-center py-3 gap-2">
+                                <Form.Label className="mb-0 search-bar">Character Search</Form.Label>
+                                <Form.Control //search box
+                                type="text" 
+                                placeholder="Search by name or alias"
+                                value={searchTerm}  // this is controlled by the parent (app.jsx)'s state. 
+                                onChange={(event) => setSearchTerm(event.target.value)}  // this updates the parent's state. when the user types something in, it changes that value to setSearchTerm for the search
+                                />
+                            </div>
+                        
                         </Form.Group>
                     </Form>
                 </Navbar.Collapse>

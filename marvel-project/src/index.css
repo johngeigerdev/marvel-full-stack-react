@@ -3,6 +3,17 @@ body {
     padding: 0rem;
 }
 
+/* Home */
+.home-heading {
+  font-family: 'Bangers', cursive;
+  font-size: 5rem;
+  letter-spacing: 2px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: yellow;
+  
+}
+
 /* CharacterCard.jsx */
 
 .character-card {
@@ -27,3 +38,18 @@ body {
   .character-card:hover .card-buttons {
     opacity: 1;
   }
+
+  /* NavBar */
+  .navbar {
+    padding-top: 0 !important;  /* I had to add this because bootstrap's navbar was forcing it's built-in padding so this is overriding it */
+    padding-bottom: 0 !important;
+  }
+
+  .search-bar {  /* I did this to override the Form.Label here rendering it as a block-level element by default, it was putting 'character search' on 2 lines and I wanted them on one line */
+    font-size: 25px;
+    font-weight: bold; 
+    white-space: nowrap; 
+    display: inline-block;
+    color: yellow;
+  }
+ 
