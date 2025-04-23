@@ -3,9 +3,9 @@ import { Container, Row, Col, Carousel } from 'react-bootstrap';
 function About() {
 
     return(
-        <Container>
+        <Container fluid className="bg-dark text-center">
             <Row className = "text-center">
-                <h3> Welcome to my module-7 full-stack Marvel project</h3>
+                <h3 className="about-heading"> Welcome to my module-7 full-stack Marvel project</h3>
             </Row>
             <Row className="mb-4 justify-content-center">
                 <Col md="auto">
@@ -50,7 +50,7 @@ function About() {
                 </Col>
             </Row>
             <Row>
-                <Col>
+                <Col className="about-text">
                     <p>
                         In this project, I used several Javascript and React concepts to put everything together. The back-end was 
                         provided so that students could focus on their front-end skills in this project. I took the back-end files and

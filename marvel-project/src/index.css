@@ -39,6 +39,25 @@ body {
     opacity: 1;
   }
 
+  .card-img {  /* had to add fixed height to make all the cards a uniform height */
+    background-color: #111; 
+    padding: 5px;
+    height: 300px;
+    object-fit: contain;
+    border: 1px solid yellow;
+    transition: transform 0.3s ease; 
+  }
+  .card-img:hover {
+    transform: scale(1.05);
+  }
+  .hero .card-img {
+    border: 2px solid limegreen;
+  }
+
+  .villain .card-img {
+    border: 2px solid crimson;
+  }
+
   /* NavBar */
   .navbar {
     padding-top: 0 !important;  /* I had to add this because bootstrap's navbar was forcing it's built-in padding so this is overriding it */
@@ -53,3 +72,18 @@ body {
     color: yellow;
   }
  
+
+/* About */
+.about-heading {
+  font-family: 'Bangers', cursive;
+  font-size: 5rem;
+  text-wrap: wrap;
+  letter-spacing: 2px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: yellow;
+}
+.about-text {
+  color: yellow;
+  
+}

@@ -21,8 +21,8 @@ function CharacterCard({ name, id, alias, alignment, powers, image_url, onDelete
     const preview = powers.length > 25 ? powers.slice(0, 25) + '...' : powers; 
 
     return (
-        <Card style={{ width: '25rem' }} className="character-card mb-4 shadow-sm">
-            <Card.Img src={image_url} alt={`${name} character image`} style={{height: '300px', objectFit: 'cover'}} />  {/* style here ensures images are all the same height for uniformity */}
+        <Card style={{ width: '25rem' }} className={`character-card mb-4 shadow-sm border-0 ${alignment === 'hero'? 'hero': 'villain'}`}> {/*Using the ternary operator here to set the class based on villain or hero for background type in index.css */}
+            <Card.Img src={image_url} alt={`${name} character image`} className='card-img' />
             <Card.Body className="bg-primary text-white d-flex justify-content-center">  
                 <div className="text-start">
                     <Card.Title className="fw-bold fs-1 text-center mb-4 text-decoration-underline"> {name} </Card.Title>
