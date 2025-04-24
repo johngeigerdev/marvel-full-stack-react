@@ -1,7 +1,20 @@
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
 
 function About() {
-
+    const heroes = [
+        {
+            name: "Iron Man",
+            img: "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Iron_Man_%28circa_2018%29.png/220px-Iron_Man_%28circa_2018%29.png"
+        },
+        {
+            name: "Thor",
+            img: "https://upload.wikimedia.org/wikipedia/en/1/17/Thor_by_Olivier_Coipel.png"
+        },
+        {
+            name: "Spider Man",
+            img: "https://upload.wikimedia.org/wikipedia/en/2/21/Web_of_Spider-Man_Vol_1_129-1.png"
+        }
+    ];
     return(
         <Container fluid className="bg-dark text-center">
             <Row className = "justify-content-center text-center">
@@ -11,43 +24,20 @@ function About() {
                 <Col xs={12} className="d-flex justify-content-center">
                     <div style={{ width: '100%', maxWidth: '350px' }}>  
                         <Carousel className="mb-4">
-                            <Carousel.Item>
-                                <div className="d-flex justify-content-center align-items-center" style={{ height: '400px' }}>
-                                    <img
-                                        src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Iron_Man_%28circa_2018%29.png/220px-Iron_Man_%28circa_2018%29.png"
-                                        alt="Iron Man"
-                                        style={{ height: '400px', objectFit: 'contain'}}
-                                    />
-                                </div>
-                                
-                                <Carousel.Caption style={{ textShadow: '2px 2px black' }} >
-                                    <h3>Iron Man</h3>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <div className="d-flex justify-content-center align-items-center" style={{ height: '400px' }}>
-                                    <img
-                                        src="https://upload.wikimedia.org/wikipedia/en/1/17/Thor_by_Olivier_Coipel.png"
-                                        alt="Thor"
-                                        style={{ height: '400px', objectFit: 'contain'}}
-                                    />
-                                </div>
-                                <Carousel.Caption style={{ textShadow: '2px 2px black' }} >
-                                    <h3>Thor</h3>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <div className="d-flex justify-content-center align-items-center" style={{ height: '400px' }}>
-                                    <img
-                                        src="https://upload.wikimedia.org/wikipedia/en/2/21/Web_of_Spider-Man_Vol_1_129-1.png"
-                                        alt="Spider Man"
-                                        style={{ height: '400px', objectFit: 'contain'}}
-                                    />
-                                </div>
-                                <Carousel.Caption style={{ textShadow: '2px 2px black' }} >
-                                    <h3>Spider Man</h3>
-                                </Carousel.Caption>
-                            </Carousel.Item>
+                            {heroes.map(hero => (
+                                <Carousel.Item key={hero.name}>
+                                    <div style={{ height: '400px'}} className="d-flex justify-content-center align-items-center">
+                                        <img
+                                            src={hero.img}
+                                            alt={hero.name}
+                                            style={{ maxHeight: '100%', objectFit: 'contain'}}
+                                        />
+                                    </div>
+                                    <Carousel.Caption style={{ textShadow: '2px 2px black' }} >
+                                        <h3>Iron Man</h3>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                            ))}
                         </Carousel>
                     </div>
                     

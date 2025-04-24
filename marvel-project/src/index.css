@@ -93,3 +93,12 @@ body {
   font-family: 'Bangers', cursive;
   letter-spacing: 1px;
 }
+
+/* Edit Character */
+.character-form-container {
+  border: 2px solid yellow;
+  border-radius: 12px;
+  padding: 2rem;
+  background-color: #1c1c1c;
+  box-shadow: 0 0 15px #007bff;
+}

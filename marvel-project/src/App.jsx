@@ -13,6 +13,7 @@ function App() {
   
   //putting searchTerm here so that it can be passed down and used by both child components (navbar and home)
   const [searchTerm, setSearchTerm] = useState('') //this is going to be for the character search feature
+  const  [darkMode, setDarkMode] = useState(true);
 
   return (
     <Router>
