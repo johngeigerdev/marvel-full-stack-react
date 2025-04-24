@@ -82,8 +82,14 @@ body {
   text-decoration: underline;
   text-transform: uppercase;
   color: yellow;
+  
 }
 .about-text {
   color: yellow;
-  
+  background: blue;
+  border-radius: 1rem;
+  margin: 0 10rem;
+  font-size: 2rem;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
 }
