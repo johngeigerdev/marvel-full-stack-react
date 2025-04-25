@@ -71,6 +71,13 @@ body {
     display: inline-block;
     color: yellow;
   }
+#basic-nav-dropdown {
+  color: white;
+}
+.nav-link {
+  color: white;
+}
+
  
 
 /* About */
@@ -102,3 +109,4 @@ body {
   background-color: #1c1c1c;
   box-shadow: 0 0 15px #007bff;
 }
+

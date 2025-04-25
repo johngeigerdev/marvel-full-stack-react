@@ -38,7 +38,7 @@ function Home({ searchTerm }) {
 
   //below is mapping through the array of characters and uses the character id as the key and displaying the card for each
   return (
-    <Container fluid className="mt-0 px-0 text-primary bg-dark">
+    <Container fluid className="bg-dark text-light min-vh-100 py-5">
       <h1 className = "text-center fw-bold py-5 home-heading">Explore the Marvel Multiverse</h1>
       {filteredCharacters.length === 0 && (  //this will display the below message if the search found nothing
         <p className="text-center mt-4 text-muted">No characters match your search criteria</p>

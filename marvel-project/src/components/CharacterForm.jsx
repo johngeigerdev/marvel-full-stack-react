@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { Container } from 'react-bootstrap';
 
-function CharacterForm({ initialData, onSubmit }) {
+function CharacterForm({ initialData, onSubmit, formTitle }) {
     const [ formData, setFormData ] = useState(initialData);
 
     const handleChange = (event) => {
@@ -22,7 +21,7 @@ function CharacterForm({ initialData, onSubmit }) {
     return (
         <div className="character-form-container">
             <form onSubmit={handleSubmit} className="p-4 rounded shadow-sm text-light" style={{background: '#1c1c1c'}}>
-                <h2 className="mb-4 text-center">Enter Character Edits</h2>
+                <h2 className="mb-4 text-center">{formTitle}</h2>
                 <Form.Group className="mb-3">
                     <Form.Label>Name</Form.Label>
                     <Form.Control 
@@ -77,7 +76,6 @@ function CharacterForm({ initialData, onSubmit }) {
                         required
                     />
                 </Form.Group>
-
                 <Button variant="primary" type="submit">Submit</Button>
             </form>
         </div>

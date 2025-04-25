@@ -12,7 +12,8 @@ import axios from 'axios';
 import CharacterForm from '../components/CharacterForm';
 import Spinner from 'react-bootstrap/Spinner';
 import Alert from 'react-bootstrap/Alert';
-import { Container, Row, Col, Carousel } from 'react-bootstrap';
+
+import { Container, Row, Col } from 'react-bootstrap';
 
 function EditCharacter() {
     const { id } = useParams(); //useParams and other hooks must be at the top of the functional component here
@@ -81,7 +82,7 @@ function EditCharacter() {
     }
 
     return (
-        <div className="bg-dark min-vh-100">
+        <div className="w-100 bg-dark min-vh-100 ">
             <Container fluid className='min-vh-100 d-flex justify-content-center align-items-center text-light'>
                 <Row className="w-100 justify-content-center">
                     <Col xs={12} sm={10} md={8} lg={6}>

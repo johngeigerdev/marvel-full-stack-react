@@ -33,19 +33,21 @@ function AddCharacter () {
     };
 
     return (
-        <Container className="my-4">
-            <Row>
-                <Col>
-                    <CharacterForm
-                        initialData = {initialData}
-                        onSubmit={handleSubmit}
-                        formTitle='Add New Character'
-                    />
-                    {success && <Alert variant="success">{success}</Alert>}
-                    {error && <Alert variant="danger">{error}</Alert>}
-                </Col>
-            </Row>
-        </Container>
+        <div className="bg-dark min-vh-100">
+            <Container fluid className='min-vh-100 d-flex justify-content-center align-items-center text-light'>
+                <Row className="w-100 justify-content-center">
+                    <Col xs={12} sm={10} md={8} lg={6}>
+                        <CharacterForm
+                            initialData = {initialData}
+                            onSubmit={handleSubmit}
+                            formTitle='Add New Character'
+                        />
+                        {success && <Alert variant="success">{success}</Alert>}
+                        {error && <Alert variant="danger">{error}</Alert>}
+                    </Col>
+                </Row>
+            </Container>
+        </div>
     )
 }
 
